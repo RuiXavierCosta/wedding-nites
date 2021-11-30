@@ -2,23 +2,18 @@ import Head from 'next/head'
 
 import { fetchEntries } from '@utils/contentfulPosts'
 
-import Header from '@components/Header'
-import Footer from '@components/Footer'
-
 export default function Home({ posts }) {
   return (
     <div className="container">
       <Head>
-        <title>Next + Contentful Starter</title>
+        <title>Cátia & Nicolau</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Header />
-        <h1>Hi</h1>
+        <h1>Tocá buer</h1>
+        <img style={{maxWidth: '100%'}} src="/docl.jpg" alt="Tá top" /> 
       </main>
-
-      <Footer />
 
       <style jsx>{`
         .container {
