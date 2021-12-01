@@ -1,69 +1,33 @@
 import Head from 'next/head'
+import Image from 'next/image';
 
-import { fetchEntries } from '@utils/contentfulPosts'
+import heroSVG from 'public/hero.svg';
 
-export default function Home({ posts }) {
+export default function Home() {
   return (
-    <div className="container">
+    <div className="full-wrapper">
       <Head>
         <title>Cátia & Nicolau</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>Tocá buer</h1>
-        <img style={{maxWidth: '100%'}} src="/docl.jpg" alt="Tá top" /> 
+      <main className="container text-center py-3">
+        <div className="hero">
+          <Image src={heroSVG} alt="Tá top"/>
+
+          <h1>Acompanhem-nos neste dia especial.</h1>
+          <div className="celebration-date">
+            <p>Sábado</p>
+            <h2>03</h2>
+            <p>Setembro</p>
+            <h3>2022</h3>
+          </div>
+
+          <a href="https://goo.gl/maps/FMTdj5UjJ599fP2N8" className="btn btn-primary" target="_blank" rel="noreferrer">
+            Direções
+          </a>
+        </div>
       </main>
-
-      <style jsx>{`
-        .container {
-          height: 100vh;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .posts {
-          display: flex;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-            Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
     </div>
   )
-}
-
-export async function getStaticProps() {
-  const res = await fetchEntries()
-  const posts = await res.map((p) => {
-    return p.fields
-  })
-
-  return {
-    props: {
-      posts,
-    },
-  }
 }

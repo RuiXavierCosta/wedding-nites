@@ -1,0 +1,51 @@
+@import "vars";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  height: 100%;
+}
+
+#__next {
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Rochester", cursive;
+  font-weight: 900;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.full-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 0.5em;
+  background-color: $bg-color;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background-image: $bg-texture;
+  background-color: $bg-accent;
+}
