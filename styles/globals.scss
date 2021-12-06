@@ -42,6 +42,10 @@ main {
 
 .celebration-date {
   .day {
+    .date-text-wrapper {
+      width: 100px;
+    }
+
     .dashed-value {
       border: 2px dotted;
       border-left: none;
