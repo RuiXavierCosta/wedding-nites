@@ -23,12 +23,12 @@ export default function Home() {
             <div className="date-text-wrapper flex-1 d-flex justify-content-end">
               <p className="dashed-value my-0">Sábado</p>
             </div>
-            <h2 className="my-0 mx-2 day-value">03</h2>
+            <h2 className="my-0 mx-2 day-value fw-light">03</h2>
             <div className="date-text-wrapper flex-1 d-flex justify-content-start">
               <p className="dashed-value my-0">Setembro</p>
             </div>
           </div>
-          <div className="year">
+          <div className="year fw-light">
             <h3>2022</h3>
           </div>
         </div>
