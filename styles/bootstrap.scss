@@ -10,11 +10,10 @@ $headings-font-family: "Rochester", cursive;
 
 $font-size-base: 1rem;
 
-$body-bg: $bg-color;
+$body-bg: $bg-accent;
 $body-color: $text-color;
 
 $primary: $text-color;
-$light: $text-color;
 
 $font-weight-lighter: lighter;
 $font-weight-light: 300;
@@ -58,3 +57,7 @@ $font-sizes: (
 
 // Utilities
 @import "bootstrap/scss/utilities/api";
+
+.btn-transparent {
+  @include button-variant(transparent, $primary);
+}
